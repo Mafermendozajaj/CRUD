@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Cursos de Platzi</h1>
+
+<p>
+    <a href="{% url "courses:new" %}">Agregar curso</a>
+</p>
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Time start</th>
+        <th>action</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in object_list %}
+        <tr>
+            <td>{{ course.name }}</td>
+            <td></td>
+            <td>
+                <a class="btn btn-primary" href="{% url "courses:detail" course.id %}">Ver</a> | 
+                <a class="btn btn-primary" href="{% url "courses:edit" course.id %}">Editar</a> | 
+                <a class="btn btn-primary" href="{% url "courses:delete" course.id %}">Borrar</a> 
+            </td>
+        </tr>
+    {% endfor %}
+    
+
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+
+
+ {% endblock %}
