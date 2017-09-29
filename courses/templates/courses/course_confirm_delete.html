@@ -12,20 +12,14 @@
 
 
 <div class="container">
-	<h2>Ingresar curso</h2>
-<form class="form-horizontal" method="post">
-	<div class="form-group">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <div class="col-sm-10">
-    <input type="submit" value="Submit" />
-    </div>
+	<h2>Eliminación</h2>
+<form method="post">{% csrf_token %}
+    <p class=""> ¿Estás seguro que deseas borrar el curso "{{ object }}"? </p>
+    <input type="submit" class="btn btn-primary" value="Submit"/>
 </form>
 </div>
 
 
-</body>
-
 <footer class="container-fluid text-center">
-  <p>Footer </p>
+  <p>Footer</p>
 </footer>
