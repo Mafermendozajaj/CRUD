@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Curso</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -15,11 +15,16 @@
 	<h2>Eliminación</h2>
 <form method="post">{% csrf_token %}
     <p class=""> ¿Estás seguro que deseas borrar el curso "{{ object }}"? </p>
-    <input type="submit" class="btn btn-primary" value="Submit"/>
+    <button type="submit" class="btn btn-primary" value="Submit">Eliminar</button>
 </form>
+
+<br>
+<p>
+    <a href="{% url "courses:list" %}">Regresar</a>
+</p>
 </div>
 
 
 <footer class="container-fluid text-center">
-  <p>Footer</p>
+  <p>Parte del Footer de la pagina</p>
 </footer>

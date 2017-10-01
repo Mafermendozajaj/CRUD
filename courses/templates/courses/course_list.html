@@ -24,15 +24,16 @@
     <thead>
       <tr>
         <th>Nombre</th>
-        <th>Algo</th>
-        <th>Opciones</th>
+        <th>Ciudad</th>
+        <th>País</th>
       </tr>
     </thead>
     <tbody>
       {% for course in object_list %}
         <tr>
             <td>{{ course.name }}</td>
-            <td></td>
+            <td>{{ course.city }}</td>
+            <td>{{ course.country}}</td>
             <td>
                 <a class="btn btn-primary" href="{% url "courses:detail" course.id %}">Ver</a> | 
                 <a class="btn btn-primary" href="{% url "courses:edit" course.id %}">Editar</a> | 
